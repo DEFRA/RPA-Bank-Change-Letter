@@ -86,6 +86,7 @@
       <Variable x:TypeArguments="x:String" Name="strContinue" />
       <Variable x:TypeArguments="sd:DataTable" Name="dtCustomerDetails" />
       <Variable x:TypeArguments="x:String" Name="strWorkingDirectory" />
+      <Variable x:TypeArguments="x:String" Name="strTraderNumber" />
     </Flowchart.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -367,7 +368,7 @@
                                               <av:PointCollection x:Key="ConnectorLocation">300,1517.02 300,1566.02</av:PointCollection>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
-                                          <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Populate All Customer Letters workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="Logic Workflows\Populate All Customer Letters.xaml">
+                                          <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Populate All Customer Letters workflow" sap:VirtualizedContainerService.HintSize="361,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="Logic Workflows\Populate All Customer Letters.xaml">
                                             <ui:InvokeWorkflowFile.Arguments>
                                               <InArgument x:TypeArguments="scg:Dictionary(x:String, ui:GenericValue)" x:Key="IN_dictConfig">
                                                 <mva:VisualBasicValue x:TypeArguments="scg:Dictionary(x:String, ui:GenericValue)" ExpressionText="IN_dictConfig" />
@@ -390,6 +391,9 @@
                                               <InArgument x:TypeArguments="x:String" x:Key="IN_str4Digits">
                                                 <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="strAccountNumber" />
                                               </InArgument>
+                                              <InArgument x:TypeArguments="x:String" x:Key="IN_strTraderNumber">
+                                                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="strTraderNumber" />
+                                              </InArgument>
                                             </ui:InvokeWorkflowFile.Arguments>
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -408,12 +412,8 @@
                                               </sap:WorkflowViewStateService.ViewState>
                                               <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Convert All Letters to PDFs workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" UnSafe="False" WorkflowFileName="Logic Workflows\Convert All Letters to PDFs.xaml">
                                                 <ui:InvokeWorkflowFile.Arguments>
-                                                  <InArgument x:TypeArguments="scg:Dictionary(x:String, ui:GenericValue)" x:Key="IN_dictConfig">
-                                                    <mva:VisualBasicValue x:TypeArguments="scg:Dictionary(x:String, ui:GenericValue)" ExpressionText="IN_dictConfig" />
-                                                  </InArgument>
-                                                  <InArgument x:TypeArguments="x:String" x:Key="IN_strWorkingDirectory">
-                                                    <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="strWorkingDirectory" />
-                                                  </InArgument>
+                                                  <InArgument x:TypeArguments="scg:Dictionary(x:String, ui:GenericValue)" x:Key="IN_dictConfig">[IN_dictConfig]</InArgument>
+                                                  <InArgument x:TypeArguments="x:String" x:Key="IN_strWorkingDirectory">[strWorkingDirectory]</InArgument>
                                                 </ui:InvokeWorkflowFile.Arguments>
                                                 <sap:WorkflowViewStateService.ViewState>
                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
