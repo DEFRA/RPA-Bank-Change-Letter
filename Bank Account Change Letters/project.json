@@ -5,7 +5,7 @@
   "dependencies": {
     "CRM": "[1.0.30]",
     "Reusable.Components": "[1.0.7]",
-    "Rural.Payments": "[1.0.11]",
+    "Rural.Payments": "[1.0.12]",
     "UiPath.Excel.Activities": "[2.8.6]",
     "UiPath.Mail.Activities": "[1.8.6]",
     "UiPath.System.Activities": "[20.4.0]",

@@ -16,7 +16,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1198,3305</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1198,3345</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Process_Case_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="23">
@@ -269,7 +269,7 @@
                                   <av:PointCollection x:Key="ConnectorLocation">300,1178.5 300,1227.5</av:PointCollection>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <TryCatch DisplayName="Try RP Get Customer IDs" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+                              <TryCatch DisplayName="Try RP Get Customer IDs" sap:VirtualizedContainerService.HintSize="438,506" sap2010:WorkflowViewState.IdRef="TryCatch_1">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -284,12 +284,27 @@
                                     </sap:WorkflowViewStateService.ViewState>
                                     <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke RP Get Customer IDs" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Logic Workflows\RP Get Customer IDs.xaml">
                                       <ui:InvokeWorkflowFile.Arguments>
-                                        <InArgument x:TypeArguments="scg:Dictionary(x:String, ui:GenericValue)" x:Key="IN_dictConfig">[IN_dictConfig]</InArgument>
-                                        <OutArgument x:TypeArguments="ui:Browser" x:Key="OUT_browserRP">[IN_browserRP]</OutArgument>
-                                        <InArgument x:TypeArguments="x:String" x:Key="IN_strSBI">[OUT_strSBINumber]</InArgument>
-                                        <OutArgument x:TypeArguments="x:String" x:Key="OUT_strBusinessName">[strBusinessName]</OutArgument>
-                                        <OutArgument x:TypeArguments="x:String" x:Key="OUT_strVendorNumber">[strVendorNumber]</OutArgument>
-                                        <OutArgument x:TypeArguments="scg:List(x:String)" x:Key="OUT_listCustomers">[listCustomerIDs]</OutArgument>
+                                        <InArgument x:TypeArguments="scg:Dictionary(x:String, ui:GenericValue)" x:Key="IN_dictConfig">
+                                          <mva:VisualBasicValue x:TypeArguments="scg:Dictionary(x:String, ui:GenericValue)" ExpressionText="IN_dictConfig" />
+                                        </InArgument>
+                                        <OutArgument x:TypeArguments="ui:Browser" x:Key="OUT_browserRP">
+                                          <mva:VisualBasicReference x:TypeArguments="ui:Browser" ExpressionText="IN_browserRP" />
+                                        </OutArgument>
+                                        <InArgument x:TypeArguments="x:String" x:Key="IN_strSBI">
+                                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="OUT_strSBINumber" />
+                                        </InArgument>
+                                        <OutArgument x:TypeArguments="x:String" x:Key="OUT_strBusinessName">
+                                          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="strBusinessName" />
+                                        </OutArgument>
+                                        <OutArgument x:TypeArguments="x:String" x:Key="OUT_strVendorNumber">
+                                          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="strVendorNumber" />
+                                        </OutArgument>
+                                        <OutArgument x:TypeArguments="scg:List(x:String)" x:Key="OUT_listCustomers">
+                                          <mva:VisualBasicReference x:TypeArguments="scg:List(x:String)" ExpressionText="listCustomerIDs" />
+                                        </OutArgument>
+                                        <OutArgument x:TypeArguments="x:String" x:Key="OUT_strTraderNumber">
+                                          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="strTraderNumber" />
+                                        </OutArgument>
                                       </ui:InvokeWorkflowFile.Arguments>
                                     </ui:InvokeWorkflowFile>
                                     <Assign DisplayName="Reset Retry Counter" sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_1">
@@ -370,30 +385,14 @@
                                           </sap:WorkflowViewStateService.ViewState>
                                           <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Populate All Customer Letters workflow" sap:VirtualizedContainerService.HintSize="361,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="Logic Workflows\Populate All Customer Letters.xaml">
                                             <ui:InvokeWorkflowFile.Arguments>
-                                              <InArgument x:TypeArguments="scg:Dictionary(x:String, ui:GenericValue)" x:Key="IN_dictConfig">
-                                                <mva:VisualBasicValue x:TypeArguments="scg:Dictionary(x:String, ui:GenericValue)" ExpressionText="IN_dictConfig" />
-                                              </InArgument>
-                                              <InArgument x:TypeArguments="sd:DataTable" x:Key="IN_dtCustomerDetails">
-                                                <mva:VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="dtCustomerDetails" />
-                                              </InArgument>
-                                              <OutArgument x:TypeArguments="x:String" x:Key="OUT_strWorkingDirectory">
-                                                <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="strWorkingDirectory" />
-                                              </OutArgument>
-                                              <InArgument x:TypeArguments="x:String" x:Key="IN_strSBINumber">
-                                                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="OUT_strSBINumber" />
-                                              </InArgument>
-                                              <InArgument x:TypeArguments="x:String" x:Key="IN_strVendorNumber">
-                                                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="strVendorNumber" />
-                                              </InArgument>
-                                              <InArgument x:TypeArguments="x:String" x:Key="IN_strBusinessName">
-                                                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="strBusinessName" />
-                                              </InArgument>
-                                              <InArgument x:TypeArguments="x:String" x:Key="IN_str4Digits">
-                                                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="strAccountNumber" />
-                                              </InArgument>
-                                              <InArgument x:TypeArguments="x:String" x:Key="IN_strTraderNumber">
-                                                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="strTraderNumber" />
-                                              </InArgument>
+                                              <InArgument x:TypeArguments="scg:Dictionary(x:String, ui:GenericValue)" x:Key="IN_dictConfig">[IN_dictConfig]</InArgument>
+                                              <InArgument x:TypeArguments="sd:DataTable" x:Key="IN_dtCustomerDetails">[dtCustomerDetails]</InArgument>
+                                              <OutArgument x:TypeArguments="x:String" x:Key="OUT_strWorkingDirectory">[strWorkingDirectory]</OutArgument>
+                                              <InArgument x:TypeArguments="x:String" x:Key="IN_strSBINumber">[OUT_strSBINumber]</InArgument>
+                                              <InArgument x:TypeArguments="x:String" x:Key="IN_strVendorNumber">[strVendorNumber]</InArgument>
+                                              <InArgument x:TypeArguments="x:String" x:Key="IN_strBusinessName">[strBusinessName]</InArgument>
+                                              <InArgument x:TypeArguments="x:String" x:Key="IN_str4Digits">[strAccountNumber]</InArgument>
+                                              <InArgument x:TypeArguments="x:String" x:Key="IN_strTraderNumber">[strTraderNumber]</InArgument>
                                             </ui:InvokeWorkflowFile.Arguments>
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">

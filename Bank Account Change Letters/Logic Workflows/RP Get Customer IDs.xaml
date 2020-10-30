@@ -6,11 +6,12 @@
     <x:Property Name="OUT_strBusinessName" Type="OutArgument(x:String)" />
     <x:Property Name="OUT_strVendorNumber" Type="OutArgument(x:String)" />
     <x:Property Name="OUT_listCustomers" Type="OutArgument(scg:List(x:String))" />
+    <x:Property Name="OUT_strTraderNumber" Type="OutArgument(x:String)" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>680,1793</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>680,1833</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>RP_Get_Customer_Names_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="22">
@@ -296,7 +297,7 @@
                                   <av:PointCollection x:Key="ConnectorLocation">300,895.5 300,955.5</av:PointCollection>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <TryCatch DisplayName="Try Get Business Details" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="TryCatch_3">
+                              <TryCatch DisplayName="Try Get Business Details" sap:VirtualizedContainerService.HintSize="459,606" sap2010:WorkflowViewState.IdRef="TryCatch_3">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -311,11 +312,24 @@
                                     </sap:WorkflowViewStateService.ViewState>
                                     <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Get Business Details" sap:VirtualizedContainerService.HintSize="379,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Data Workflows\Rural Payments\Get Business Details.xaml">
                                       <ui:InvokeWorkflowFile.Arguments>
-                                        <InArgument x:TypeArguments="scg:Dictionary(x:String, ui:GenericValue)" x:Key="IN_dictConfig">[IN_dictConfig]</InArgument>
-                                        <OutArgument x:TypeArguments="x:String" x:Key="OUT_strBusinessName">[OUT_strBusinessName]</OutArgument>
-                                        <OutArgument x:TypeArguments="x:String" x:Key="OUT_strVendorNumber">[OUT_strVendorNumber]</OutArgument>
-                                        <InArgument x:TypeArguments="ui:Browser" x:Key="IN_browserRP">[OUT_browserRP]</InArgument>
-                                        <OutArgument x:TypeArguments="x:String" x:Key="OUT_strBusinessUrl">[strBusinessUrl]</OutArgument>
+                                        <InArgument x:TypeArguments="scg:Dictionary(x:String, ui:GenericValue)" x:Key="IN_dictConfig">
+                                          <mva:VisualBasicValue x:TypeArguments="scg:Dictionary(x:String, ui:GenericValue)" ExpressionText="IN_dictConfig" />
+                                        </InArgument>
+                                        <OutArgument x:TypeArguments="x:String" x:Key="OUT_strBusinessName">
+                                          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="OUT_strBusinessName" />
+                                        </OutArgument>
+                                        <OutArgument x:TypeArguments="x:String" x:Key="OUT_strVendorNumber">
+                                          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="OUT_strVendorNumber" />
+                                        </OutArgument>
+                                        <InArgument x:TypeArguments="ui:Browser" x:Key="IN_browserRP">
+                                          <mva:VisualBasicValue x:TypeArguments="ui:Browser" ExpressionText="OUT_browserRP" />
+                                        </InArgument>
+                                        <OutArgument x:TypeArguments="x:String" x:Key="OUT_strBusinessUrl">
+                                          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="strBusinessUrl" />
+                                        </OutArgument>
+                                        <OutArgument x:TypeArguments="x:String" x:Key="OUT_strTraderNumber">
+                                          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="OUT_strTraderNumber" />
+                                        </OutArgument>
                                       </ui:InvokeWorkflowFile.Arguments>
                                     </ui:InvokeWorkflowFile>
                                     <Assign DisplayName="Reset Retry Counter" sap:VirtualizedContainerService.HintSize="379,60" sap2010:WorkflowViewState.IdRef="Assign_8">
