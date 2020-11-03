@@ -11,7 +11,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>723,701</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>747,701</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Breakpoint_3_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="21">
@@ -107,7 +107,7 @@
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <ui:MessageBox Buttons="YesNo" Caption="Breakpoint 3" ChosenButton="[OUT_strContinue]" DisplayName="Breakpoint" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;The robot has created a child case for each PDF letter made from the Rural Payments details.&quot;+ System.Environment.NewLine + System.Environment.NewLine + &quot;Please check that each child case has been created correctly, and each has the corresponding PDF letter attached. &quot; + System.Environment.NewLine + System.Environment.NewLine + &quot;Parent Case Number: &quot; + IN_strParentCaseNumber + System.Environment.NewLine + &quot;SBI Number: &quot; + IN_strSBI + Environment.NewLine + Environment.NewLine + &quot;Please click Yes to continue the process if everything has been created correctly, or No to stop the robot&quot;]" />
+        <ui:MessageBox Buttons="YesNo" Caption="Breakpoint 3" ChosenButton="[OUT_strContinue]" DisplayName="Breakpoint" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;The robot has attached each PDF letter made from the Rural Payments details.&quot;+ System.Environment.NewLine + System.Environment.NewLine + &quot;Please check that a customer notification has been created correctly against the SBI Number: &quot; + IN_strSBI + &quot;, and that all letters made for the SBI have been attached to the customer notification correctly.&quot; + System.Environment.NewLine + System.Environment.NewLine + &quot;Parent Case Number: &quot; + IN_strParentCaseNumber + System.Environment.NewLine + System.Environment.NewLine + &quot;Please click Yes to continue the process if everything has been attached correctly, or No to stop the robot.&quot;]" />
       </Sequence>
       <FlowStep.Next>
         <x:Reference>__ReferenceID0</x:Reference>
