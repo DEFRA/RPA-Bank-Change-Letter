@@ -72,7 +72,7 @@
       <AssemblyReference>UiPath.Word</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Flowchart DisplayName="Process_Case" sap:VirtualizedContainerService.HintSize="1208,3240" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+  <Flowchart DisplayName="Process_Case" sap:VirtualizedContainerService.HintSize="1208,3360" sap2010:WorkflowViewState.IdRef="Flowchart_1">
     <Flowchart.Variables>
       <Variable x:TypeArguments="s:Exception" Name="exceptionCurrent" />
       <Variable x:TypeArguments="x:Int32" Name="intRetryCounter" />
@@ -94,7 +94,7 @@
         <av:Point x:Key="ShapeLocation">270,2.5</av:Point>
         <av:Size x:Key="ShapeSize">60,75</av:Size>
         <av:PointCollection x:Key="ConnectorLocation">300,77.5 300,127.5</av:PointCollection>
-        <x:Double x:Key="Height">3204.5</x:Double>
+        <x:Double x:Key="Height">3323.5</x:Double>
         <x:Double x:Key="Width">1174</x:Double>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
@@ -868,7 +868,7 @@
     <FlowStep x:Name="__ReferenceID28">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <av:Point x:Key="ShapeLocation">200,3132.5</av:Point>
+          <av:Point x:Key="ShapeLocation">200,3252.5</av:Point>
           <av:Size x:Key="ShapeSize">200,51</av:Size>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
@@ -910,9 +910,9 @@
     <FlowStep x:Name="__ReferenceID29">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <av:Point x:Key="ShapeLocation">200,2884</av:Point>
+          <av:Point x:Key="ShapeLocation">200,3004</av:Point>
           <av:Size x:Key="ShapeSize">200,51</av:Size>
-          <av:PointCollection x:Key="ConnectorLocation">300,2936 300,2986</av:PointCollection>
+          <av:PointCollection x:Key="ConnectorLocation">300,3055 300,3106</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Breakpoint 3 workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_15" UnSafe="False" WorkflowFileName="Data Workflows\Breakpoint 3.xaml">
@@ -933,17 +933,17 @@
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-              <av:Point x:Key="ShapeLocation">265,2986</av:Point>
+              <av:Point x:Key="ShapeLocation">265,3106</av:Point>
               <av:Size x:Key="ShapeSize">70,87</av:Size>
-              <av:PointCollection x:Key="TrueConnector">265,3029.5 240,3029.5 240,3102.5 300,3102.5 300,3132.5</av:PointCollection>
-              <av:PointCollection x:Key="FalseConnector">335,3029.5 385,3029.5</av:PointCollection>
+              <av:PointCollection x:Key="TrueConnector">265,3149.5 240,3149.5 240,3222.5 300,3222.5 300,3252.5</av:PointCollection>
+              <av:PointCollection x:Key="FalseConnector">335,3149.5 365,3149.5 365,3148.5 385,3148.5</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <FlowDecision.False>
             <FlowStep x:Name="__ReferenceID32">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <av:Point x:Key="ShapeLocation">385,2995.5</av:Point>
+                  <av:Point x:Key="ShapeLocation">385,3115.5</av:Point>
                   <av:Size x:Key="ShapeSize">200,66</av:Size>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
@@ -985,9 +985,9 @@
     <FlowStep>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <av:Point x:Key="ShapeLocation">200,2642.02</av:Point>
+          <av:Point x:Key="ShapeLocation">200,2762.02</av:Point>
           <av:Size x:Key="ShapeSize">200,51</av:Size>
-          <av:PointCollection x:Key="ConnectorLocation">300,2694.02 300,2744.02</av:PointCollection>
+          <av:PointCollection x:Key="ConnectorLocation">300,2813.02 300,2843.02 299.5,2843.02 299.5,2864.02</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Resolve Parent Case workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_16" UnSafe="False" WorkflowFileName="Logic Workflows\Resolve Parent Case.xaml">
@@ -1007,10 +1007,10 @@
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-              <av:Point x:Key="ShapeLocation">253,2744.02</av:Point>
+              <av:Point x:Key="ShapeLocation">253,2864.02</av:Point>
               <av:Size x:Key="ShapeSize">93,87</av:Size>
-              <av:PointCollection x:Key="TrueConnector">253,2787.52 170,2787.52 170,3158.5 200,3158.5</av:PointCollection>
-              <av:PointCollection x:Key="FalseConnector">347,2787.52 360,2787.52 360,2854 300,2854 300,2884</av:PointCollection>
+              <av:PointCollection x:Key="TrueConnector">253,2907.52 170,2907.52 170,3278 200,3278</av:PointCollection>
+              <av:PointCollection x:Key="FalseConnector">346,2907.52 360,2907.52 360,2974 300,2974 300,3004</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
         </FlowDecision>
@@ -1022,7 +1022,7 @@
     <FlowStep>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <av:Point x:Key="ShapeLocation">200,2530</av:Point>
+          <av:Point x:Key="ShapeLocation">520,2534.5</av:Point>
           <av:Size x:Key="ShapeSize">200,51</av:Size>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
@@ -1032,7 +1032,7 @@
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:String" Name="item" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="745,821" sap2010:WorkflowViewState.IdRef="Sequence_22">
+            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="745,694" sap2010:WorkflowViewState.IdRef="Sequence_22">
               <Sequence.Variables>
                 <Variable x:TypeArguments="x:String" Name="strChildCaseNumber" />
                 <Variable x:TypeArguments="x:String" Name="strCustomerReference" />
@@ -1090,19 +1090,27 @@
                   </ActivityAction>
                 </ui:ForEachRow.Body>
               </ui:ForEachRow>
-              <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Attach Letter To Customer Notification workflow" sap:VirtualizedContainerService.HintSize="703,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_19" UnSafe="False" WorkflowFileName="Logic Workflows\Attach Letter To Customer Notification.xaml">
-                <ui:InvokeWorkflowFile.Arguments>
-                  <InArgument x:TypeArguments="ui:Browser" x:Key="IN_browserCRM">[IN_browserCRM]</InArgument>
-                  <InArgument x:TypeArguments="scg:Dictionary(x:String, ui:GenericValue)" x:Key="IN_dictConfig">[IN_dictConfig]</InArgument>
-                  <InArgument x:TypeArguments="x:Int32" x:Key="IN_intTimeout">[IN_dictConfig("timeoutM")]</InArgument>
-                  <InArgument x:TypeArguments="x:String" x:Key="IN_strLetterFileName">[item]</InArgument>
-                </ui:InvokeWorkflowFile.Arguments>
-              </ui:InvokeWorkflowFile>
             </Sequence>
           </ActivityAction>
         </ui:ForEach.Body>
       </ui:ForEach>
     </FlowStep>
     <x:Reference>__ReferenceID1</x:Reference>
+    <FlowStep>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <av:Point x:Key="ShapeLocation">200,2514.5</av:Point>
+          <av:Size x:Key="ShapeSize">200,51</av:Size>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Attach Letter To Customer Notification workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_20" UnSafe="False" WorkflowFileName="Logic Workflows\Attach Letter To Customer Notification.xaml">
+        <ui:InvokeWorkflowFile.Arguments>
+          <InArgument x:TypeArguments="ui:Browser" x:Key="IN_browserCRM">[IN_browserCRM]</InArgument>
+          <InArgument x:TypeArguments="scg:Dictionary(x:String, ui:GenericValue)" x:Key="IN_dictConfig">[IN_dictConfig]</InArgument>
+          <InArgument x:TypeArguments="x:Int32" x:Key="IN_intTimeout">[IN_dictConfig("timeoutM")]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="IN_strLetterFileName">[item]</InArgument>
+        </ui:InvokeWorkflowFile.Arguments>
+      </ui:InvokeWorkflowFile>
+    </FlowStep>
   </Flowchart>
 </Activity>

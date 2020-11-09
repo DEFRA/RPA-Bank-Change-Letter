@@ -141,32 +141,66 @@
                       <av:PointCollection x:Key="ConnectorLocation">310.641666666667,565.5 310.641666666667,615.5</av:PointCollection>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <TryCatch DisplayName="Try Config Reader" sap:VirtualizedContainerService.HintSize="464,865" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+                  <TryCatch DisplayName="Try Config Reader" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="TryCatch_1">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                     <TryCatch.Try>
-                      <Sequence sap:VirtualizedContainerService.HintSize="426,638" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                      <Sequence sap:VirtualizedContainerService.HintSize="376,561" sap2010:WorkflowViewState.IdRef="Sequence_13">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:CopyFile ContinueOnError="{x:Null}" Destination="[Environment.GetEnvironmentVariable(&quot;USERPROFILE&quot;) + &quot;\Desktop\Bank Letter Changes Config.xlsx&quot;]" DisplayName="Copy Config File" sap:VirtualizedContainerService.HintSize="384,157" sap2010:WorkflowViewState.IdRef="CopyFile_1" Overwrite="True" Path="\\wkvfs001\common\Customer Operations\Customer Service Centre\Robotics\Robotic Configuration Files\Bank Letter Changes Config.xlsx" />
-                        <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Config Reader" sap:VirtualizedContainerService.HintSize="384,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Data Workflows\Config Reader.xaml">
+                        <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+                          <ui:CommentOut.Body>
+                            <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="426,249" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <ui:CopyFile ContinueOnError="{x:Null}" Destination="[Environment.GetEnvironmentVariable(&quot;USERPROFILE&quot;) + &quot;\Desktop\Bank Letter Changes Config.xlsx&quot;]" DisplayName="Copy Config File" sap:VirtualizedContainerService.HintSize="384,157" sap2010:WorkflowViewState.IdRef="CopyFile_1" Overwrite="True" Path="\\wkvfs001\common\Customer Operations\Customer Service Centre\Robotics\Robotic Configuration Files\Bank Letter Changes Config.xlsx" />
+                            </Sequence>
+                          </ui:CommentOut.Body>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ui:CommentOut>
+                        <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Config Reader" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Data Workflows\Config Reader.xaml">
                           <ui:InvokeWorkflowFile.Arguments>
                             <InArgument x:TypeArguments="x:String" x:Key="IN_strConfigPath">
-                              <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Environment.GetEnvironmentVariable(&quot;USERPROFILE&quot;) + &quot;\Desktop\Bank Letter Changes Config.xlsx&quot;" />
+                              <Literal x:TypeArguments="x:String">Documents\Config\config.xlsx</Literal>
                             </InArgument>
                             <OutArgument x:TypeArguments="scg:Dictionary(x:String, ui:GenericValue)" x:Key="OUT_dictConfig">
                               <mva:VisualBasicReference x:TypeArguments="scg:Dictionary(x:String, ui:GenericValue)" ExpressionText="dictConfig" />
                             </OutArgument>
                           </ui:InvokeWorkflowFile.Arguments>
                         </ui:InvokeWorkflowFile>
-                        <ui:Delete ContinueOnError="{x:Null}" sap:VirtualizedContainerService.HintSize="384,22" sap2010:WorkflowViewState.IdRef="Delete_1" Path="[Environment.GetEnvironmentVariable(&quot;USERPROFILE&quot;) + &quot;\Desktop\Bank Letter Changes Config.xlsx&quot;]" />
-                        <Assign sap:VirtualizedContainerService.HintSize="384,60" sap2010:WorkflowViewState.IdRef="Assign_3">
+                        <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+                          <ui:CommentOut.Body>
+                            <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="242,114" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <ui:Delete ContinueOnError="{x:Null}" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Delete_1" Path="[Environment.GetEnvironmentVariable(&quot;USERPROFILE&quot;) + &quot;\Desktop\Bank Letter Changes Config.xlsx&quot;]" />
+                            </Sequence>
+                          </ui:CommentOut.Body>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ui:CommentOut>
+                        <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_3">
                           <Assign.To>
                             <OutArgument x:TypeArguments="x:Int32">[intRetryCounter]</OutArgument>
                           </Assign.To>
@@ -185,7 +219,7 @@
                       </Sequence>
                     </TryCatch.Try>
                     <TryCatch.Catches>
-                      <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="430,21" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                      <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_1">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
