@@ -16,7 +16,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>748,701</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>745,701</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Resolve_Case_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="21">
@@ -86,11 +86,11 @@
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">200,460.5</av:Point>
-          <av:Size x:Key="ShapeSize">200,68</av:Size>
+          <av:Size x:Key="ShapeSize">200,66</av:Size>
           <av:PointCollection x:Key="ConnectorLocation">369.5,0 369.5,50</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Sequence DisplayName="Log End" sap:VirtualizedContainerService.HintSize="200,68" sap2010:WorkflowViewState.IdRef="Sequence_3">
+      <Sequence DisplayName="Log End" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_3">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -109,41 +109,24 @@
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">200,243.5</av:Point>
-          <av:Size x:Key="ShapeSize">200,68</av:Size>
-          <av:PointCollection x:Key="ConnectorLocation">300,311.5 300,359.5</av:PointCollection>
+          <av:Size x:Key="ShapeSize">200,66</av:Size>
+          <av:PointCollection x:Key="ConnectorLocation">300,309.5 300,359.5</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Sequence DisplayName="Get IN Args" sap:VirtualizedContainerService.HintSize="200,68" sap2010:WorkflowViewState.IdRef="Sequence_2">
+      <Sequence DisplayName="Get IN Args" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_2">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <If Condition="[IN_dictConfig Is Nothing]" sap:VirtualizedContainerService.HintSize="579,237" sap2010:WorkflowViewState.IdRef="If_1">
+        <If Condition="[IN_dictConfig Is Nothing]" sap:VirtualizedContainerService.HintSize="484,235" sap2010:WorkflowViewState.IdRef="If_1">
           <If.Then>
             <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Data Workflows\Config Reader.xaml">
               <ui:InvokeWorkflowFile.Arguments>
-                <InArgument x:TypeArguments="x:String" x:Key="IN_strConfigPath">
-                  <Literal x:TypeArguments="x:String">Documents/Config/config.xlsx</Literal>
-                </InArgument>
-                <OutArgument x:TypeArguments="scg:Dictionary(x:String, ui:GenericValue)" x:Key="OUT_dictConfig">
-                  <mva:VisualBasicReference x:TypeArguments="scg:Dictionary(x:String, ui:GenericValue)" ExpressionText="IN_dictConfig" />
-                </OutArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="IN_strConfigPath">Documents/Config/config.xlsx</InArgument>
+                <OutArgument x:TypeArguments="scg:Dictionary(x:String, ui:GenericValue)" x:Key="OUT_dictConfig">[IN_dictConfig]</OutArgument>
               </ui:InvokeWorkflowFile.Arguments>
             </ui:InvokeWorkflowFile>
-          </If.Then>
-        </If>
-        <If Condition="[IN_browserCRM Is Nothing]" sap:VirtualizedContainerService.HintSize="579,312" sap2010:WorkflowViewState.IdRef="If_3">
-          <If.Then>
-            <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" BrowserType="IE" DisplayName="Attach Browser 'iexplore.exe Organisati...'" sap:VirtualizedContainerService.HintSize="434,162" sap2010:WorkflowViewState.IdRef="BrowserScope_2" InformativeScreenshot="b48780733a555016ae6cc19b276b98af" Selector="&lt;html title='Case: Case UI form: Bank Account Changes - Microsoft Dynamics 365' /&gt;" UiBrowser="[IN_browserCRM]">
-              <ui:BrowserScope.Body>
-                <ActivityAction x:TypeArguments="x:Object">
-                  <ActivityAction.Argument>
-                    <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
-                  </ActivityAction.Argument>
-                </ActivityAction>
-              </ui:BrowserScope.Body>
-            </ui:BrowserScope>
           </If.Then>
         </If>
       </Sequence>
@@ -152,11 +135,11 @@
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <av:Point x:Key="ShapeLocation">200,359.5</av:Point>
-              <av:Size x:Key="ShapeSize">200,52</av:Size>
+              <av:Size x:Key="ShapeSize">200,51</av:Size>
               <av:PointCollection x:Key="ConnectorLocation">300,410.5 300,460.5</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Flowchart DisplayName="Main Logic" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="Flowchart_2">
+          <Flowchart DisplayName="Main Logic" sap:VirtualizedContainerService.HintSize="958,636" sap2010:WorkflowViewState.IdRef="Flowchart_2">
             <Flowchart.Variables>
               <Variable x:TypeArguments="x:Boolean" Name="boolGeneralExists" />
               <Variable x:TypeArguments="x:Boolean" Name="boolResolveExists" />
@@ -184,16 +167,13 @@
               </sap:WorkflowViewStateService.ViewState>
               <cr:Check_For_Resolve_Case DisplayName="Check For Resolve Case" sap:VirtualizedContainerService.HintSize="200,22" IN_browserCRM="[IN_browserCRM]" IN_intTimeout="[IN_intTimeout]" sap2010:WorkflowViewState.IdRef="Check_For_Resolve_Case_1" OUT_boolResolveCaseExists="[boolResolveExists]" />
               <FlowStep.Next>
-                <FlowDecision x:Name="__ReferenceID1" DisplayName="Resolve Exists?" sap:VirtualizedContainerService.HintSize="84,87" sap2010:WorkflowViewState.IdRef="FlowDecision_2">
-                  <FlowDecision.Condition>
-                    <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="boolResolveExists" />
-                  </FlowDecision.Condition>
+                <FlowDecision x:Name="__ReferenceID1" Condition="[boolResolveExists]" DisplayName="Resolve Exists?" sap:VirtualizedContainerService.HintSize="82,87" sap2010:WorkflowViewState.IdRef="FlowDecision_2">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       <av:Point x:Key="ShapeLocation">228,199.5</av:Point>
-                      <av:Size x:Key="ShapeSize">84,87</av:Size>
-                      <av:PointCollection x:Key="FalseConnector">313,243 591,243 591,302</av:PointCollection>
+                      <av:Size x:Key="ShapeSize">82,87</av:Size>
+                      <av:PointCollection x:Key="FalseConnector">310,243 591,243 591,302</av:PointCollection>
                       <av:PointCollection x:Key="TrueConnector">229,243 128.5,243 128.5,519</av:PointCollection>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
@@ -231,12 +211,12 @@
                         </sap:WorkflowViewStateService.ViewState>
                       </cc_:Check_For_More_Commands_For_Case_Button>
                       <FlowStep.Next>
-                        <FlowDecision x:Name="__ReferenceID3" Condition="[boolMoreCommandsExists]" DisplayName="More Commands?" sap:VirtualizedContainerService.HintSize="103,87" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
+                        <FlowDecision x:Name="__ReferenceID3" Condition="[boolMoreCommandsExists]" DisplayName="More Commands?" sap:VirtualizedContainerService.HintSize="104,87" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               <av:Point x:Key="ShapeLocation">539.5,384</av:Point>
-                              <av:Size x:Key="ShapeSize">103,87</av:Size>
+                              <av:Size x:Key="ShapeSize">104,87</av:Size>
                               <av:PointCollection x:Key="FalseConnector">642.5,427.5 712.5,427.5</av:PointCollection>
                               <av:PointCollection x:Key="TrueConnector">539.5,427.5 378.5,427.5 378.5,519</av:PointCollection>
                             </scg:Dictionary>
@@ -303,11 +283,11 @@
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">200,127.5</av:Point>
-          <av:Size x:Key="ShapeSize">200,68</av:Size>
-          <av:PointCollection x:Key="ConnectorLocation">300,195.5 300,243.5</av:PointCollection>
+          <av:Size x:Key="ShapeSize">200,66</av:Size>
+          <av:PointCollection x:Key="ConnectorLocation">300,193.5 300,243.5</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Sequence DisplayName="Log Start" sap:VirtualizedContainerService.HintSize="200,68" sap2010:WorkflowViewState.IdRef="Sequence_1">
+      <Sequence DisplayName="Log Start" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_1">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>

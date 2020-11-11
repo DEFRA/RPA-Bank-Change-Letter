@@ -16,7 +16,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>747,713</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>745,713</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Create_Customer_Notification_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="21">
@@ -122,7 +122,7 @@
             <x:Boolean x:Key="IsPinned">False</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <If Condition="[IN_dictConfig Is Nothing]" sap:VirtualizedContainerService.HintSize="579,235" sap2010:WorkflowViewState.IdRef="If_1">
+        <If Condition="[IN_dictConfig Is Nothing]" sap:VirtualizedContainerService.HintSize="484,235" sap2010:WorkflowViewState.IdRef="If_1">
           <If.Then>
             <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Data Workflows\Config Reader.xaml">
               <ui:InvokeWorkflowFile.Arguments>
@@ -130,19 +130,6 @@
                 <OutArgument x:TypeArguments="scg:Dictionary(x:String, ui:GenericValue)" x:Key="OUT_dictConfig">[IN_dictConfig]</OutArgument>
               </ui:InvokeWorkflowFile.Arguments>
             </ui:InvokeWorkflowFile>
-          </If.Then>
-        </If>
-        <If Condition="[IN_browserCRM is Nothing]" sap:VirtualizedContainerService.HintSize="579,309" sap2010:WorkflowViewState.IdRef="If_2">
-          <If.Then>
-            <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" BrowserType="IE" DisplayName="Attach Browser 'iexplore.exe Case:'" sap:VirtualizedContainerService.HintSize="434,161" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="a18a834bdeeb1ee915775435ba558c55" Selector="&lt;html title='Case: Case for Multisession experience: Bank Account Change Request - Dynamics 365' /&gt;" UiBrowser="[IN_browserCRM]">
-              <ui:BrowserScope.Body>
-                <ActivityAction x:TypeArguments="x:Object">
-                  <ActivityAction.Argument>
-                    <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
-                  </ActivityAction.Argument>
-                </ActivityAction>
-              </ui:BrowserScope.Body>
-            </ui:BrowserScope>
           </If.Then>
         </If>
       </Sequence>

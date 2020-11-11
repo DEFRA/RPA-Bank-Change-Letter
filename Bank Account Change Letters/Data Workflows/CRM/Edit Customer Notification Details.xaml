@@ -16,7 +16,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>747,701</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>745,701</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Edit_Customer_Notification_Details_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="21">
@@ -97,7 +97,7 @@
             <x:Boolean x:Key="IsPinned">False</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <If Condition="[IN_dictConfig Is Nothing]" sap:VirtualizedContainerService.HintSize="579,235" sap2010:WorkflowViewState.IdRef="If_1">
+        <If Condition="[IN_dictConfig Is Nothing]" sap:VirtualizedContainerService.HintSize="484,235" sap2010:WorkflowViewState.IdRef="If_1">
           <If.Then>
             <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Data Workflows\Config Reader.xaml">
               <ui:InvokeWorkflowFile.Arguments>
@@ -105,19 +105,6 @@
                 <OutArgument x:TypeArguments="scg:Dictionary(x:String, ui:GenericValue)" x:Key="OUT_dictConfig">[IN_dictConfig]</OutArgument>
               </ui:InvokeWorkflowFile.Arguments>
             </ui:InvokeWorkflowFile>
-          </If.Then>
-        </If>
-        <If Condition="[IN_browserCRM is Nothing]" sap:VirtualizedContainerService.HintSize="579,309" sap2010:WorkflowViewState.IdRef="If_2">
-          <If.Then>
-            <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" BrowserType="IE" DisplayName="Attach Browser 'iexplore.exe Case:'" sap:VirtualizedContainerService.HintSize="434,161" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="8e3daa793662002a7b237f7ffaee910a" Selector="&lt;html title='Customer Notification: Information: New Customer Notification - Dynamics 365' /&gt;" UiBrowser="[IN_browserCRM]">
-              <ui:BrowserScope.Body>
-                <ActivityAction x:TypeArguments="x:Object">
-                  <ActivityAction.Argument>
-                    <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
-                  </ActivityAction.Argument>
-                </ActivityAction>
-              </ui:BrowserScope.Body>
-            </ui:BrowserScope>
           </If.Then>
         </If>
       </Sequence>
@@ -166,12 +153,12 @@
                 </sap:WorkflowViewStateService.ViewState>
               </ca_:Check_For_Subject>
               <FlowStep.Next>
-                <FlowDecision x:Name="__ReferenceID0" Condition="[boolSubjectExists]" DisplayName="Subject Exists?" sap:VirtualizedContainerService.HintSize="82,87" sap2010:WorkflowViewState.IdRef="FlowDecision_3">
+                <FlowDecision x:Name="__ReferenceID0" Condition="[boolSubjectExists]" DisplayName="Subject Exists?" sap:VirtualizedContainerService.HintSize="81,87" sap2010:WorkflowViewState.IdRef="FlowDecision_3">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       <av:Point x:Key="ShapeLocation">459.5,199.5</av:Point>
-                      <av:Size x:Key="ShapeSize">82,87</av:Size>
+                      <av:Size x:Key="ShapeSize">81,87</av:Size>
                       <av:PointCollection x:Key="TrueConnector">459.5,243 420,243 420,319</av:PointCollection>
                       <av:PointCollection x:Key="FalseConnector">540.5,243 590.5,243</av:PointCollection>
                     </scg:Dictionary>
@@ -209,12 +196,12 @@
                             </sap:WorkflowViewStateService.ViewState>
                           </ca_:Check_For_Document_Type>
                           <FlowStep.Next>
-                            <FlowDecision x:Name="__ReferenceID3" Condition="[boolDocumentTypeExists]" DisplayName="Document Type Exists?" sap:VirtualizedContainerService.HintSize="127,87" sap2010:WorkflowViewState.IdRef="FlowDecision_2">
+                            <FlowDecision x:Name="__ReferenceID3" Condition="[boolDocumentTypeExists]" DisplayName="Document Type Exists?" sap:VirtualizedContainerService.HintSize="126,87" sap2010:WorkflowViewState.IdRef="FlowDecision_2">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   <av:Point x:Key="ShapeLocation">357,473</av:Point>
-                                  <av:Size x:Key="ShapeSize">127,87</av:Size>
+                                  <av:Size x:Key="ShapeSize">126,87</av:Size>
                                   <av:PointCollection x:Key="TrueConnector">357,516.5 320,516.5 320,579</av:PointCollection>
                                   <av:PointCollection x:Key="FalseConnector">483,516.5 534,516.5</av:PointCollection>
                                 </scg:Dictionary>
@@ -295,12 +282,12 @@
                                                     </sap:WorkflowViewStateService.ViewState>
                                                   </ca_1:Check_For_Attaching_A_Document>
                                                   <FlowStep.Next>
-                                                    <FlowDecision x:Name="__ReferenceID13" Condition="[boolAttachDocumentExists]" DisplayName="Attaching A Document?" sap:VirtualizedContainerService.HintSize="132,87" sap2010:WorkflowViewState.IdRef="FlowDecision_4">
+                                                    <FlowDecision x:Name="__ReferenceID13" Condition="[boolAttachDocumentExists]" DisplayName="Attaching A Document?" sap:VirtualizedContainerService.HintSize="133,87" sap2010:WorkflowViewState.IdRef="FlowDecision_4">
                                                       <sap:WorkflowViewStateService.ViewState>
                                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                           <av:Point x:Key="ShapeLocation">183.5,989.5</av:Point>
-                                                          <av:Size x:Key="ShapeSize">132,87</av:Size>
+                                                          <av:Size x:Key="ShapeSize">133,87</av:Size>
                                                           <av:PointCollection x:Key="TrueConnector">183.5,1033 100,1033 100,1109</av:PointCollection>
                                                           <av:PointCollection x:Key="FalseConnector">316.5,1033 365.5,1033</av:PointCollection>
                                                         </scg:Dictionary>
