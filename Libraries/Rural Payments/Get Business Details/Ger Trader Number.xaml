@@ -71,7 +71,7 @@
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="ui:Anchor" Name="ContextAnchor" />
                 </ActivityAction.Argument>
-                <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text Trader Number" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="GetValue_1">
+                <ui:GetValue ContinueOnError="True" DisplayName="Get Text Trader Number" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="GetValue_1">
                   <ui:GetValue.Target>
                     <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="2a48beff-8d8e-4861-8749-eae2ab16cf3b" InformativeScreenshot="2f15763fc92082c9bc0dc6c00b5ecee9" Selector="&lt;webctrl tag='DIV' /&gt;">
                       <ui:Target.TimeoutMS>
@@ -89,7 +89,7 @@
               </ActivityAction>
             </ui:AnchorBase.Action>
             <ui:AnchorBase.AnchorProvider>
-              <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find Element Trader Number Tag" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_1">
+              <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" ContinueOnError="True" DisplayName="Find Element Trader Number Tag" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_1">
                 <ui:WaitUiElementAppear.Target>
                   <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c819042a-2d1e-437c-8e2c-08df33d5d8e3" InformativeScreenshot="c7db6247043d3e69bc253b2f4b156c50" Selector="&lt;webctrl tag='H4' aaname='Trader Number' /&gt;">
                     <ui:Target.TimeoutMS>

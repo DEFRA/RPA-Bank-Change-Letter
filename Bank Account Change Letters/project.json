@@ -5,7 +5,7 @@
   "dependencies": {
     "CRM": "[1.0.33]",
     "Reusable.Components": "[1.0.7]",
-    "Rural.Payments": "[1.0.12]",
+    "Rural.Payments": "[1.0.13]",
     "UiPath.Excel.Activities": "[2.8.6]",
     "UiPath.Mail.Activities": "[1.8.6]",
     "UiPath.System.Activities": "[20.4.0]",
@@ -15,7 +15,7 @@
   "webServices": [],
   "schemaVersion": "4.0",
   "studioVersion": "20.4.3.0",
-  "projectVersion": "1.1.18",
+  "projectVersion": "1.1.19",
   "runtimeOptions": {
     "autoDispose": false,
     "isPausable": true,
