@@ -114,13 +114,13 @@
               <av:PointCollection x:Key="ConnectorLocation">300,395.5 300,445.5</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <p:WordApplicationScope DisplayName="Word Application Scope" FilePath="[IN_strWorkingDirectory + IN_strSBINumber + &quot; - &quot; + IN_strCustomerName + Path.GetExtension(IN_dictConfig(&quot;LetterTemplateFilePath&quot;))]" sap:VirtualizedContainerService.HintSize="989,1848" sap2010:WorkflowViewState.IdRef="WordApplicationScope_1">
+          <p:WordApplicationScope DisplayName="Word Application Scope" FilePath="[IN_strWorkingDirectory + IN_strSBINumber + &quot; - &quot; + IN_strCustomerName + Path.GetExtension(IN_dictConfig(&quot;LetterTemplateFilePath&quot;))]" sap:VirtualizedContainerService.HintSize="989,1849" sap2010:WorkflowViewState.IdRef="WordApplicationScope_1">
             <p:WordApplicationScope.Body>
               <ActivityAction x:TypeArguments="ui:WordDocument">
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="ui:WordDocument" Name="WordDocumentScope" />
                 </ActivityAction.Argument>
-                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="955,1739" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="955,1740" sap2010:WorkflowViewState.IdRef="Sequence_2">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -128,11 +128,11 @@
                   </sap:WorkflowViewStateService.ViewState>
                   <p:WordReplaceText Found="{x:Null}" DisplayName="Replace Customer Name" sap:VirtualizedContainerService.HintSize="913,137" sap2010:WorkflowViewState.IdRef="WordReplaceText_1" Replace="[IN_strCustomerName]" Search="&lt;Customer Name&gt;" />
                   <p:WordReplaceText Found="{x:Null}" DisplayName="Replace Address" sap:VirtualizedContainerService.HintSize="913,137" sap2010:WorkflowViewState.IdRef="WordReplaceText_2" Replace="[IN_strAddress]" Search="&lt;Address&gt;" />
-                  <p:WordReplaceText Found="{x:Null}" DisplayName="Replace Date" sap:VirtualizedContainerService.HintSize="913,137" sap2010:WorkflowViewState.IdRef="WordReplaceText_3" Replace="[Now.ToString(&quot;dd/MM/yyyy&quot;)]" Search="&lt;Date&gt;" />
+                  <p:WordReplaceText Found="{x:Null}" DisplayName="Replace Date" sap:VirtualizedContainerService.HintSize="913,137" sap2010:WorkflowViewState.IdRef="WordReplaceText_3" Replace="[Now.ToString(&quot;dd MMMM yyyy&quot;)]" Search="&lt;Date&gt;" />
                   <p:WordReplaceText Found="{x:Null}" DisplayName="Replace SBI Number" sap:VirtualizedContainerService.HintSize="913,137" sap2010:WorkflowViewState.IdRef="WordReplaceText_4" Replace="[IN_strSBINumber]" Search="&lt;SBI&gt;" />
                   <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="913,61" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[&quot;Vendor Number: &quot; + IN_strVendorNumber]" />
                   <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="913,61" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[&quot;Trader Number: &quot; + IN_strTraderNumber]" />
-                  <If Condition="[IN_strTraderNumber IS Nothing OR IN_strTraderNumber.Trim IS &quot;&quot;]" DisplayName="If Trader number is nothing" sap:VirtualizedContainerService.HintSize="913,284" sap2010:WorkflowViewState.IdRef="If_2">
+                  <If Condition="[IN_strTraderNumber IS Nothing OR IN_strTraderNumber.Trim IS &quot;&quot;]" DisplayName="If Trader number is nothing" sap:VirtualizedContainerService.HintSize="913,285" sap2010:WorkflowViewState.IdRef="If_2">
                     <If.Then>
                       <p:WordReplaceText Found="{x:Null}" DisplayName="Replace Vendor Number" sap:VirtualizedContainerService.HintSize="434,137" sap2010:WorkflowViewState.IdRef="WordReplaceText_5" Replace="[IN_strVendorNumber]" Search="&lt;Vendor/Trader Number&gt;" />
                     </If.Then>
