@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Populate_Letter" this:Populate_Letter.IN_strWorkingDirectory="C:\Users\x952358.DEMETER\Desktop\Working Directory\" this:Populate_Letter.IN_strCustomerName="Mr Tester" this:Populate_Letter.IN_strAddress="1 Test Avenue&#xA;Testing&#xA;Test&#xA;AA1 1AA" this:Populate_Letter.IN_strVendorNumber="987654321" this:Populate_Letter.IN_strSBINumber="123456789" this:Populate_Letter.IN_strBusinessName="Test Business" this:Populate_Letter.IN_str4Digits="1234" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="http://schemas.uipath.com/workflow/activities/word" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Populate_Letter" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="http://schemas.uipath.com/workflow/activities/word" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="IN_dictConfig" Type="InArgument(scg:Dictionary(x:String, ui:GenericValue))" />
     <x:Property Name="IN_strWorkingDirectory" Type="InArgument(x:String)" />
@@ -9,6 +9,7 @@
     <x:Property Name="IN_strBusinessName" Type="InArgument(x:String)" />
     <x:Property Name="IN_str4Digits" Type="InArgument(x:String)" />
     <x:Property Name="OUT_strLetterOutcome" Type="OutArgument(x:String)" />
+    <x:Property Name="IN_strTraderNumber" Type="InArgument(x:String)" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
@@ -113,26 +114,35 @@
               <av:PointCollection x:Key="ConnectorLocation">300,395.5 300,445.5</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <p:WordApplicationScope DisplayName="Word Application Scope" FilePath="[IN_strWorkingDirectory + IN_strSBINumber + &quot; - &quot; + IN_strCustomerName + Path.GetExtension(IN_dictConfig(&quot;LetterTemplateFilePath&quot;))]" sap:VirtualizedContainerService.HintSize="791,1499" sap2010:WorkflowViewState.IdRef="WordApplicationScope_1">
+          <p:WordApplicationScope DisplayName="Word Application Scope" FilePath="[IN_strWorkingDirectory + IN_strSBINumber + &quot; - &quot; + IN_strCustomerName + Path.GetExtension(IN_dictConfig(&quot;LetterTemplateFilePath&quot;))]" sap:VirtualizedContainerService.HintSize="989,1849" sap2010:WorkflowViewState.IdRef="WordApplicationScope_1">
             <p:WordApplicationScope.Body>
               <ActivityAction x:TypeArguments="ui:WordDocument">
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="ui:WordDocument" Name="WordDocumentScope" />
                 </ActivityAction.Argument>
-                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="476,1390" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="955,1740" sap2010:WorkflowViewState.IdRef="Sequence_2">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <p:WordReplaceText Found="{x:Null}" DisplayName="Replace Customer Name" sap:VirtualizedContainerService.HintSize="434,137" sap2010:WorkflowViewState.IdRef="WordReplaceText_1" Replace="[IN_strCustomerName]" Search="&lt;Customer Name&gt;" />
-                  <p:WordReplaceText Found="{x:Null}" DisplayName="Replace Address" sap:VirtualizedContainerService.HintSize="434,137" sap2010:WorkflowViewState.IdRef="WordReplaceText_2" Replace="[IN_strAddress]" Search="&lt;Address&gt;" />
-                  <p:WordReplaceText Found="{x:Null}" DisplayName="Replace Date" sap:VirtualizedContainerService.HintSize="434,137" sap2010:WorkflowViewState.IdRef="WordReplaceText_3" Replace="[Now.ToString(&quot;dd/MM/yyyy&quot;)]" Search="&lt;Date&gt;" />
-                  <p:WordReplaceText Found="{x:Null}" DisplayName="Replace SBI Number" sap:VirtualizedContainerService.HintSize="434,137" sap2010:WorkflowViewState.IdRef="WordReplaceText_4" Replace="[IN_strSBINumber]" Search="&lt;SBI&gt;" />
-                  <p:WordReplaceText Found="{x:Null}" DisplayName="Replace Vendor Number" sap:VirtualizedContainerService.HintSize="434,137" sap2010:WorkflowViewState.IdRef="WordReplaceText_5" Replace="[IN_strVendorNumber]" Search="&lt;Vendor Number&gt;" />
-                  <p:WordReplaceText Found="{x:Null}" DisplayName="Replace Business Name" sap:VirtualizedContainerService.HintSize="434,137" sap2010:WorkflowViewState.IdRef="WordReplaceText_6" Replace="[IN_strBusinessName]" Search="&lt;Business Name&gt;" />
-                  <p:WordReplaceText Found="{x:Null}" DisplayName="Replace Last 4 Digits" sap:VirtualizedContainerService.HintSize="434,137" sap2010:WorkflowViewState.IdRef="WordReplaceText_7" Replace="[IN_str4Digits]" Search="&lt;4 Digits&gt;" />
-                  <ui:MessageBox Buttons="YesNo" Caption="Check Customer Letter" ChosenButton="[OUT_strLetterOutcome]" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="434,59" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;Please check the customer letter and make any changes that are needed to it.&quot; + Environment.NewLine + Environment.NewLine + &quot;Click Yes if you would like the robot to continue processing this letter, or click No if you would like the robot to stop processing this letter.&quot;]" />
+                  <p:WordReplaceText Found="{x:Null}" DisplayName="Replace Customer Name" sap:VirtualizedContainerService.HintSize="913,137" sap2010:WorkflowViewState.IdRef="WordReplaceText_1" Replace="[IN_strCustomerName]" Search="&lt;Customer Name&gt;" />
+                  <p:WordReplaceText Found="{x:Null}" DisplayName="Replace Address" sap:VirtualizedContainerService.HintSize="913,137" sap2010:WorkflowViewState.IdRef="WordReplaceText_2" Replace="[IN_strAddress]" Search="&lt;Address&gt;" />
+                  <p:WordReplaceText Found="{x:Null}" DisplayName="Replace Date" sap:VirtualizedContainerService.HintSize="913,137" sap2010:WorkflowViewState.IdRef="WordReplaceText_3" Replace="[Now.ToString(&quot;dd MMMM yyyy&quot;)]" Search="&lt;Date&gt;" />
+                  <p:WordReplaceText Found="{x:Null}" DisplayName="Replace SBI Number" sap:VirtualizedContainerService.HintSize="913,137" sap2010:WorkflowViewState.IdRef="WordReplaceText_4" Replace="[IN_strSBINumber]" Search="&lt;SBI&gt;" />
+                  <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="913,61" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[&quot;Vendor Number: &quot; + IN_strVendorNumber]" />
+                  <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="913,61" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[&quot;Trader Number: &quot; + IN_strTraderNumber]" />
+                  <If Condition="[IN_strTraderNumber IS Nothing OR IN_strTraderNumber.Trim IS &quot;&quot;]" DisplayName="If Trader number is nothing" sap:VirtualizedContainerService.HintSize="913,285" sap2010:WorkflowViewState.IdRef="If_2">
+                    <If.Then>
+                      <p:WordReplaceText Found="{x:Null}" DisplayName="Replace Vendor Number" sap:VirtualizedContainerService.HintSize="434,137" sap2010:WorkflowViewState.IdRef="WordReplaceText_5" Replace="[IN_strVendorNumber]" Search="&lt;Vendor/Trader Number&gt;" />
+                    </If.Then>
+                    <If.Else>
+                      <p:WordReplaceText Found="{x:Null}" DisplayName="Replace Trader Number" sap:VirtualizedContainerService.HintSize="434,137" sap2010:WorkflowViewState.IdRef="WordReplaceText_8" Replace="[IN_strTraderNumber]" Search="&lt;Vendor/Trader Number&gt;" />
+                    </If.Else>
+                  </If>
+                  <p:WordReplaceText Found="{x:Null}" DisplayName="Replace Business Name" sap:VirtualizedContainerService.HintSize="913,137" sap2010:WorkflowViewState.IdRef="WordReplaceText_6" Replace="[IN_strBusinessName]" Search="&lt;Business Name&gt;" />
+                  <p:WordReplaceText Found="{x:Null}" DisplayName="Replace Last 4 Digits" sap:VirtualizedContainerService.HintSize="913,137" sap2010:WorkflowViewState.IdRef="WordReplaceText_7" Replace="[IN_str4Digits]" Search="&lt;4 Digits&gt;" />
+                  <ui:MessageBox Buttons="YesNo" Caption="Check Customer Letter" ChosenButton="[OUT_strLetterOutcome]" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="913,59" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;Please check the customer letter and make any changes that are needed to it.&quot; + Environment.NewLine + Environment.NewLine + &quot;Click Yes if you would like the robot to continue processing this letter, or click No if you would like the robot to stop processing this letter.&quot;]" />
                 </Sequence>
               </ActivityAction>
             </p:WordApplicationScope.Body>

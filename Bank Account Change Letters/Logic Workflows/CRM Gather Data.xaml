@@ -159,10 +159,18 @@
                     </sap:WorkflowViewStateService.ViewState>
                     <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Gather Phone Call Information" sap:VirtualizedContainerService.HintSize="379,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="Data Workflows\CRM\Gather Phone Call Information.xaml">
                       <ui:InvokeWorkflowFile.Arguments>
-                        <InArgument x:TypeArguments="scg:Dictionary(x:String, ui:GenericValue)" x:Key="IN_dictConfig">[IN_dictConfig]</InArgument>
-                        <InArgument x:TypeArguments="ui:Browser" x:Key="IN_browserCRM">[IN_browserCRM]</InArgument>
-                        <InArgument x:TypeArguments="x:Int32" x:Key="IN_intTimeout">[IN_dictConfig("timeoutM")]</InArgument>
-                        <OutArgument x:TypeArguments="x:String" x:Key="OUT_strAccountNumber">[OUT_strAccountNumber]</OutArgument>
+                        <InArgument x:TypeArguments="scg:Dictionary(x:String, ui:GenericValue)" x:Key="IN_dictConfig">
+                          <mva:VisualBasicValue x:TypeArguments="scg:Dictionary(x:String, ui:GenericValue)" ExpressionText="IN_dictConfig" />
+                        </InArgument>
+                        <InArgument x:TypeArguments="ui:Browser" x:Key="IN_browserCRM">
+                          <mva:VisualBasicValue x:TypeArguments="ui:Browser" ExpressionText="IN_browserCRM" />
+                        </InArgument>
+                        <InArgument x:TypeArguments="x:Int32" x:Key="IN_intTimeout">
+                          <mva:VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="IN_dictConfig(&quot;timeoutM&quot;)" />
+                        </InArgument>
+                        <OutArgument x:TypeArguments="x:String" x:Key="OUT_strAccountNumber">
+                          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="OUT_strAccountNumber" />
+                        </OutArgument>
                       </ui:InvokeWorkflowFile.Arguments>
                     </ui:InvokeWorkflowFile>
                     <Assign DisplayName="Reset Retry Counter" sap:VirtualizedContainerService.HintSize="379,60" sap2010:WorkflowViewState.IdRef="Assign_10">
