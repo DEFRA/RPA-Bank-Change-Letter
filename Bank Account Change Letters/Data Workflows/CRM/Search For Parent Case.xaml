@@ -20,7 +20,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>712,701</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>712,741</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Search_For_Parent_Case_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="42">
@@ -301,21 +301,18 @@
             <FlowStep>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <av:Point x:Key="ShapeLocation">370,389</av:Point>
-                  <av:Size x:Key="ShapeSize">200,22</av:Size>
-                  <av:PointCollection x:Key="ConnectorLocation">470,411 470,508 231,508 231,538</av:PointCollection>
+                  <av:Point x:Key="ShapeLocation">360,463.5</av:Point>
+                  <av:Size x:Key="ShapeSize">200,79</av:Size>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <cgs:Check_For_Search_Result DisplayName="Check For Search Result" sap:VirtualizedContainerService.HintSize="200,22" IN_browserCRM="[IN_browserCRM]" IN_intTimeout="[IN_intTimeout]" sap2010:WorkflowViewState.IdRef="Check_For_Search_Result_1" OUT_boolSearchResultExists="[boolSearchResultsExists]">
+              <cgs:Check_For_Search_Result sap2010:Annotation.AnnotationText="connect to this when testing, and go straight to click case title" DisplayName="Check For Search Result" sap:VirtualizedContainerService.HintSize="200,79" IN_browserCRM="[IN_browserCRM]" IN_intTimeout="[IN_intTimeout]" sap2010:WorkflowViewState.IdRef="Check_For_Search_Result_1" OUT_boolSearchResultExists="[boolSearchResultsExists]">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </cgs:Check_For_Search_Result>
-              <FlowStep.Next>
-                <x:Reference>__ReferenceID2</x:Reference>
-              </FlowStep.Next>
             </FlowStep>
             <x:Reference>__ReferenceID2</x:Reference>
             <x:Reference>__ReferenceID3</x:Reference>
