@@ -16,7 +16,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>745,701</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>664,701</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Edit_Customer_Notification_Details_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="21">
@@ -432,6 +432,21 @@
             <x:Reference>__ReferenceID13</x:Reference>
             <x:Reference>__ReferenceID14</x:Reference>
             <x:Reference>__ReferenceID15</x:Reference>
+            <FlowStep>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <av:Point x:Key="ShapeLocation">0,604.02</av:Point>
+                  <av:Size x:Key="ShapeSize">200,51</av:Size>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" Buttons="Ok" DisplayName="Connect in Test for user input" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;Please enter scheme type &amp; scheme year by hand and then press OK&quot;]">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:MessageBox>
+            </FlowStep>
           </Flowchart>
           <FlowStep.Next>
             <FlowStep x:Name="__ReferenceID18">

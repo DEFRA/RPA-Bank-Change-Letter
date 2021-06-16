@@ -20,7 +20,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>672,701</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>664,701</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Search_For_Parent_Case_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="42">
@@ -231,7 +231,7 @@
                                 </sap:WorkflowViewStateService.ViewState>
                               </cgs:Check_Search_Result_Case_Reference>
                               <FlowStep.Next>
-                                <FlowDecision x:Name="__ReferenceID2" Condition="[IN_strParentCaseNumber.Trim = strCaseReference.Trim]" DisplayName="Correct Case?" sap:VirtualizedContainerService.HintSize="78,87" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
+                                <FlowDecision x:Name="__ReferenceID3" Condition="[IN_strParentCaseNumber.Trim = strCaseReference.Trim]" DisplayName="Correct Case?" sap:VirtualizedContainerService.HintSize="78,87" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <av:Point x:Key="ShapeLocation">172.5,538</av:Point>
@@ -241,7 +241,7 @@
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
                                   <FlowDecision.True>
-                                    <FlowStep x:Name="__ReferenceID3">
+                                    <FlowStep x:Name="__ReferenceID2">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <av:Point x:Key="ShapeLocation">30,668.5</av:Point>
@@ -303,6 +303,7 @@
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <av:Point x:Key="ShapeLocation">360,463.5</av:Point>
                   <av:Size x:Key="ShapeSize">200,79</av:Size>
+                  <av:PointCollection x:Key="ConnectorLocation">560,503 590,503 590,679.5 230,679.5</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <cgs:Check_For_Search_Result sap2010:Annotation.AnnotationText="connect to this when testing, and go straight to click case title" DisplayName="Check For Search Result" sap:VirtualizedContainerService.HintSize="200,79" IN_browserCRM="[IN_browserCRM]" IN_intTimeout="[IN_intTimeout]" sap2010:WorkflowViewState.IdRef="Check_For_Search_Result_1" OUT_boolSearchResultExists="[boolSearchResultsExists]">
@@ -313,9 +314,12 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </cgs:Check_For_Search_Result>
+              <FlowStep.Next>
+                <x:Reference>__ReferenceID2</x:Reference>
+              </FlowStep.Next>
             </FlowStep>
-            <x:Reference>__ReferenceID2</x:Reference>
             <x:Reference>__ReferenceID3</x:Reference>
+            <x:Reference>__ReferenceID2</x:Reference>
             <x:Reference>__ReferenceID4</x:Reference>
             <x:Reference>__ReferenceID5</x:Reference>
             <x:Reference>__ReferenceID6</x:Reference>

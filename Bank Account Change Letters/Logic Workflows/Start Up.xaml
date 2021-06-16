@@ -11,7 +11,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>748,788</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>664,788</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Start_Up_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="21">
@@ -96,7 +96,7 @@
           <av:PointCollection x:Key="ConnectorLocation">300,424.5 300,474.5</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Flowchart DisplayName="Main Logic" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Flowchart_2">
+      <Flowchart DisplayName="Main Logic" sap:VirtualizedContainerService.HintSize="1070,1004" sap2010:WorkflowViewState.IdRef="Flowchart_2">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -201,7 +201,7 @@
                       <av:PointCollection x:Key="ConnectorLocation">200,476.5 200,516.5</av:PointCollection>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <TryCatch DisplayName="Try Open CRM" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+                  <TryCatch DisplayName="Try Open CRM" sap:VirtualizedContainerService.HintSize="438,606" sap2010:WorkflowViewState.IdRef="TryCatch_2">
                     <TryCatch.Try>
                       <Sequence DisplayName="Try Open CRM" sap:VirtualizedContainerService.HintSize="376,379" sap2010:WorkflowViewState.IdRef="Sequence_4">
                         <sap:WorkflowViewStateService.ViewState>
@@ -210,7 +210,7 @@
                             <x:Boolean x:Key="IsPinned">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Data Workflows\CRM\Open CRM.xaml">
+                        <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File - Open CRM" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Data Workflows\CRM\Open CRM.xaml">
                           <ui:InvokeWorkflowFile.Arguments>
                             <OutArgument x:TypeArguments="ui:Browser" x:Key="OUT_browserCRM">[OUT_browserCRM]</OutArgument>
                             <InArgument x:TypeArguments="scg:Dictionary(x:String, ui:GenericValue)" x:Key="IN_dictConfig">[IN_dictConfig]</InArgument>
@@ -431,13 +431,13 @@
                                   <av:PointCollection x:Key="ConnectorLocation">350,450 320,450 320,450.5 300,450.5</av:PointCollection>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <Sequence DisplayName="Retry Logic" sap:VirtualizedContainerService.HintSize="376,322" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                              <Sequence DisplayName="Retry Logic" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_7">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_12">
+                                <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_12">
                                   <Assign.To>
                                     <OutArgument x:TypeArguments="x:Int32">[intRetryCounter]</OutArgument>
                                   </Assign.To>
@@ -445,14 +445,52 @@
                                     <InArgument x:TypeArguments="x:Int32">[intRetryCounter + 1]</InArgument>
                                   </Assign.Value>
                                 </Assign>
-                                <ui:CloseTab Browser="[OUT_browserCRM]" ContinueOnError="True" DisplayName="Close Tab" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="CloseTab_4" />
-                                <ui:CloseWindow TimeoutMS="{x:Null}" UseWindow="{x:Null}" ContinueOnError="True" DisplayName="Close Window" sap:VirtualizedContainerService.HintSize="334,68" sap2010:WorkflowViewState.IdRef="CloseWindow_4" Selector="&lt;html title='Sign in to your account' /&gt;" WaitForReady="INTERACTIVE">
-                                  <sap:WorkflowViewStateService.ViewState>
-                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <x:Boolean x:Key="IsPinned">True</x:Boolean>
-                                    </scg:Dictionary>
-                                  </sap:WorkflowViewStateService.ViewState>
-                                </ui:CloseWindow>
+                                <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="262,51" sap2010:WorkflowViewState.IdRef="TryCatch_4">
+                                  <TryCatch.Try>
+                                    <ui:CloseTab Browser="[OUT_browserCRM]" ContinueOnError="True" DisplayName="Close Tab" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="CloseTab_4" />
+                                  </TryCatch.Try>
+                                  <TryCatch.Catches>
+                                    <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_4">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <ActivityAction x:TypeArguments="s:Exception">
+                                        <ActivityAction.Argument>
+                                          <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                                        </ActivityAction.Argument>
+                                      </ActivityAction>
+                                    </Catch>
+                                  </TryCatch.Catches>
+                                </TryCatch>
+                                <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="262,51" sap2010:WorkflowViewState.IdRef="TryCatch_5">
+                                  <TryCatch.Try>
+                                    <ui:CloseWindow TimeoutMS="{x:Null}" UseWindow="{x:Null}" ContinueOnError="True" DisplayName="Close Window" sap:VirtualizedContainerService.HintSize="334,68" sap2010:WorkflowViewState.IdRef="CloseWindow_4" Selector="&lt;html title='Sign in to your account' /&gt;" WaitForReady="INTERACTIVE">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </ui:CloseWindow>
+                                  </TryCatch.Try>
+                                  <TryCatch.Catches>
+                                    <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_5">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <ActivityAction x:TypeArguments="s:Exception">
+                                        <ActivityAction.Argument>
+                                          <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                                        </ActivityAction.Argument>
+                                      </ActivityAction>
+                                    </Catch>
+                                  </TryCatch.Catches>
+                                </TryCatch>
                               </Sequence>
                               <FlowStep.Next>
                                 <x:Reference>__ReferenceID1</x:Reference>
