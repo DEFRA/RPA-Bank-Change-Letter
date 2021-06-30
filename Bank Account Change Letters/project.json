@@ -3,7 +3,7 @@
   "description": "The main workflows for the Bank Account Change Letters Process",
   "main": "Main.xaml",
   "dependencies": {
-    "CRM": "[1.0.64]",
+    "CRM": "[1.0.66]",
     "Reusable.Components": "[1.0.7]",
     "Rural.Payments": "[1.0.13]",
     "UiPath.Excel.Activities": "[2.8.6]",
